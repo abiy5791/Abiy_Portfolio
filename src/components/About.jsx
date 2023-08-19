@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full bg-gradient-to-b from-gray-800 to-black text-white sm:h-screen"
+      className="w-full dark:bg-gradient-to-b from-gray-800 to-black dark:text-white sm:h-screen bg-slate-100"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -12,7 +12,7 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="text-xl mt-5">
+        <p className="text-xl mt-5 dark:text-gray-400">
           I'm Abiy Teklu, a Junior Web and Mobile App Developer eager to tackle
           new challenges. Armed with a Bachelor's degree in Computer Science and
           Engineering from Adama Science And Technology University, I've spent
@@ -21,7 +21,7 @@ const About = () => {
           digital experiences that seamlessly blend design and functionality.
         </p>
         <br />
-        <p className="text-xl">
+        <p className="text-xl dark:text-gray-400">
           I'm driven to create innovative solutions with skills spanning
           Flutter, WordPress, React, HTML, and CSS. My projects include QrMenu,
           a dynamic Flutter-based restaurant menu platform with an admin panel

@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      className="w-full h-screen dark:bg-gradient-to-b from-black to-gray-800 p-4 dark:text-white bg-slate-100"
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
@@ -26,19 +26,19 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Enter Your Name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:border"
+              className="p-2 bg-transparent border-blue-300 border-2 rounded-md dark:text-white focus:outline-none"
             />
             <input
               type="text"
               name="email"
               placeholder="Enter Your Email"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none my-4"
+              className="p-2 bg-transparent border-2 border-blue-300  rounded-md dark:text-white focus:outline-none my-4"
             />
             <textarea
               name="message"
               rows={7}
               placeholder="Enter Your Message"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className="p-2 bg-transparent border-2 border-blue-300  rounded-md dark:text-white focus:outline-none"
             ></textarea>
             <button className="text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-500 hover:text-black">
               Let's talk

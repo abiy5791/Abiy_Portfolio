@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import DarkModeToggle from "./DarkModeToggle";
 
 const NavBar = () => {
   const [navstate, setNavstate] = useState(false);
@@ -28,7 +29,7 @@ const NavBar = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 bg-transparent fixed dark:bg-black dark:text-white">
       <div>
         <Link to="home" smooth duration={500}>
           <h1 className="text-5xl font-signature ml-2 cursor-pointer">Abiy</h1>
@@ -38,13 +39,14 @@ const NavBar = () => {
         {NavItems.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-110 duration-200 hover:text-blue-300"
+            className="px-4 cursor-pointer capitalize font-medium dark:text-gray-300 hover:scale-110 duration-200 hover:text-blue-300"
           >
             <Link to={link} smooth duration={500}>
               {link}
             </Link>
           </li>
         ))}
+        <DarkModeToggle />
       </ul>
 
       <div
