@@ -29,12 +29,16 @@ const NavBar = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 bg-transparent fixed dark:bg-black dark:text-white">
+    <div className="flex justify-between items-center w-full h-15 px-4 bg-slate-100 fixed dark:bg-black dark:text-white">
       <div>
         <Link to="home" smooth duration={500}>
-          <h1 className="text-5xl font-signature ml-2 cursor-pointer">Abiy</h1>
+          <h1 className="text-4xl font-signature ml-2 mt-2 cursor-pointer">
+            Abiy
+          </h1>
         </Link>
       </div>
+
+      <DarkModeToggle />
       <ul className="hidden md:flex">
         {NavItems.map(({ id, link }) => (
           <li
@@ -46,7 +50,6 @@ const NavBar = () => {
             </Link>
           </li>
         ))}
-        <DarkModeToggle />
       </ul>
 
       <div
@@ -55,8 +58,9 @@ const NavBar = () => {
       >
         {navstate ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
+
       {navstate && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen dark:bg-gradient-to-b from-black to-gray-800 dark:text-gray-500 bg-slate-100 text-zinc-900">
           {NavItems.map(({ id, link }) => (
             <li
               key={id}
